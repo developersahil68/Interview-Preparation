@@ -5,27 +5,27 @@ const dt =  [
  [15,18]
 ]
 
-// function mergeoverlap(data) {
-//     if(data.length <= 1) return data;
+function mergeoverlap(data) {
+    if(data.length <= 1) return data;
 
-//    data.sort((a , b) => a[0] - b[0]);
+   data.sort((a , b) => a[0] - b[0]);
 
-//    const result = [data[0]];
+   const result = [data[0]];
 
-//    for(let i  = 1 ; i < data.length ; i++){
-//     const current =  result[result.length - 1];
-//     const next = data[i];
+   for(let i  = 1 ; i < data.length ; i++){
+    const current =  result[result.length - 1];
+    const next = data[i];
 
-//     if(next[0] <= current[1]){
-//         current[1] = Math.max(current[1] , next[0]);
-//     }else{
-//         result.push(next)
-//     }
-//    }
-//   console.log(result);
-//    return result
+    if(next[0] <= current[1]){
+        current[1] = Math.max(current[1] , next[0]);
+    }else{
+        result.push(next)
+    }
+   }
+  console.log(result);
+   return result
 
-// }
+}
 
 
 

@@ -35,11 +35,11 @@ function unflatten(obj){
 
         let current = ans;
 
-        for(const i = 0; i < obar.length ; i++){
+        for(const i = 0; i < parts.length ; i++){
 
             const part = parts[i];
 
-            if(i == obar.length - 1){
+            if(i == parts.length - 1){
                 current[part] = value;
             }else{
                 if(!current[part]){

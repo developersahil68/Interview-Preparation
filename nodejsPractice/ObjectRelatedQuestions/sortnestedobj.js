@@ -49,7 +49,7 @@ function sortObjectKeys(obj) {
     }
      
     if(Array.isArray(obj)){
-        obj.map((item) => sortObjectKeys(item));
+     return   obj.map((item) => sortObjectKeys(item));
     }
 
      const sortobj = Object.keys(obj).sort((a , b) =>{
@@ -86,3 +86,40 @@ function sortObjectKeys(obj) {
 //     }
 //     return ans;
 // }
+
+
+
+
+
+
+
+
+
+
+function dowork(obj){
+
+    if(obj === null || typeof obj !== "object") return obj;
+
+    if(Array.isArray(obj)){
+      return  obj.map((item) => dowork(item))
+    }
+
+
+    const ans = {}
+
+
+    const sortedobj = Object.keys(obj).sort((a , b) =>{
+        a.localeCompare(b , undefined , {
+            sensitivity: "base"
+        })
+    })
+
+
+    for (const key of sortedobj){
+        ans[key] = dowork(obj[key])
+    }
+
+    return ans;
+
+
+}

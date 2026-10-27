@@ -7,20 +7,42 @@ const employees = [
 ];
 
 
-function groupDep(employees){
-    const res = {}
+// function groupDep(employees){
+//     const res = {}
+
+//     for(const employee of employees){
+
+//         const department = employee.department
+
+//         if(!res[department]){
+//            res[department] = []
+//         }
+//         res[department].push(employee)
+//     }
+//     console.log(res);
+//     return res;
+// }
+
+
+
+
+function gd(employees){
+    const result = {}
 
     for(const employee of employees){
-
         const department = employee.department
 
-        if(!res[department]){
-           res[department] = []
+        if(!result[department]){
+            result[department] = []
         }
-        res[department].push(employee)
+
+        result[department].push(employee)
     }
-    console.log(res);
-    return res;
+
+    return result;
 }
+
+
+
 
 groupDep(employees)

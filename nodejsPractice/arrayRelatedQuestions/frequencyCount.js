@@ -23,4 +23,22 @@ function countFreq(arr){
     return data;
 }
 
+
+
+
+
+function freqCount(arr){
+    const result = {}
+
+    for(const key of arr){
+        if(!result[key]){
+            result[key] = 1;
+        }else{
+            result[key]++
+        }
+    }
+
+    return result;
+}
+
 countFreq(arr);
